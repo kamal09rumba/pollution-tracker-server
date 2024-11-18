@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pollution-tracker-server"
+version = "0.1.0"
+description = ""
+authors = ["Kamal Lama <kamal09rumba@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^3.1.0"
+flask-restful = "^0.3.10"
+flask-sqlalchemy = "^3.1.1"
+requests = "^2.32.3"
+flask-cors = "^5.0.0"
+flask-migrate = "^4.0.7"
+faker = "^33.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
