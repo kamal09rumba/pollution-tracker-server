@@ -12,10 +12,13 @@ class PollutionHistory(db.Model):
     ph_level = db.Column(db.Float)
     temperature = db.Column(db.Float)
 
+    def __repr__(self):
+        return f'<id {self.id}>'
+
     def to_dict(self):
         return {
             'id': self.id,
-            'date': self.date,
+            'date': self.date.isoformat(),
             'air_quality_index': self.air_quality_index,
             'water_quality_index': self.water_quality_index,
             'ph_level': self.ph_level,

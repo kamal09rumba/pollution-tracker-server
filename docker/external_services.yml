@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  db:
+    container_name: postgis13
+    image: postgis/postgis:13-3.1-alpine
+    env_file: .env
+    volumes:
+      - postgis13-data:/var/lib/postgresql/data
+    networks:
+      - external-services
+
+networks:
+  external-services:
+    external: true
+
+volumes:
+  postgis13-data:
+    name: postgis13-data
